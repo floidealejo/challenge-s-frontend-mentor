@@ -15,6 +15,7 @@ body {
   --grayDark: #5f616d;
   --padding-lateral: 0 1.5em;
   --font-size: 46px;
+  --font-color: hsl(0, 0%, 100%);
 }
 
 .header {
@@ -44,7 +45,7 @@ body {
 .card {
   display: grid;
   border-radius: 5px;
-  background: #f0f3fa;
+  background: var(--gray);
 
   /* margin-bottom: 30px; */
 }
@@ -77,7 +78,7 @@ body {
   text-align: center;
 }
 .card-social-media {
-  color: #6f716f;
+  color: var(--font-color);
   display: flex;
   font-weight: bold;
   font-size: 12px;
@@ -103,7 +104,7 @@ body {
 
 .card-followers-title {
   /* border: 1px solid green; */
-  color: var(--gray);
+  color: var(--font-color);
   font-weight: 400;
   font-size: 0.9em;
   text-transform: uppercase;
@@ -165,4 +166,97 @@ body {
   justify-self: self-end;
   align-self: self-end;
   margin: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .grid {
+    /* border: 1px solid purple; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    /* grid-template-rows: 1fr 0.25fr repeat(2, 0.5fr); */
+  }
+
+  .top-cards {
+    display: grid;
+    text-align: center;
+    max-width: 1220px;
+    margin: auto;
+    margin-top: -100px;
+  }
+  .wrapper {
+    display: grid;
+    justify-self: self-start;
+    padding: var(--padding-lateral);
+    color: var(--grayDark);
+  }
+  .header div {
+    display: grid;
+    text-align: center;
+    max-width: 1220px;
+    /* margin: auto; */
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .grid {
+    /* border: 1px solid purple; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    /* grid-template-rows: 1fr 0.25fr repeat(2, 0.5fr); */
+  }
+
+  .top-cards {
+    display: grid;
+    text-align: center;
+    max-width: 1220px;
+    margin: auto;
+    margin-top: -100px;
+  }
+  .wrapper {
+    display: grid;
+    justify-self: self-start;
+    padding: var(--padding-lateral);
+    color: var(--grayDark);
+  }
+  .header div {
+    display: grid;
+    text-align: center;
+    max-width: 1220px;
+    /* margin: auto; */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: hsl(230, 17%, 14%);
+    color: var(--font-color);
+  }
+  :root {
+    /* Dark theme mode */
+    /* --Very-Dark-Blue(BG): hsl(230, 17%, 14%);
+    --Very-Dark-Blue(Top BG Pattern): hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue(Card BG): hsl(228, 28%, 20%);
+    --Desaturated-Blue(Text): hsl(228, 34%, 66%);
+    --White(Text): hsl(0, 0%, 100%); */
+    --gray: hsl(228, 28%, 20%);
+  }
+  .top-cards {
+    color: var(--font-color);
+  }
+  .card-small-views {
+    color: hsl(228, 34%, 66%);
+  }
+
+  .wrapper p {
+    color: hsl(228, 34%, 66%);
+  }
+  .header {
+    background: hsl(232, 19%, 15%);
+  }
 }
