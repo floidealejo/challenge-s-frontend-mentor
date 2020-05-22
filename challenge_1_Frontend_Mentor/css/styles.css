@@ -2,6 +2,8 @@ body {
   margin: 0;
   /* border: 1px solid red; */
   font-family: 'Inter', sans-serif;
+  background: var(--baseBackground);
+  color: var(--baseColor);
 }
 :root {
   --lime-green: hsl(163, 72%, 41%);
@@ -11,15 +13,17 @@ body {
   --instagram-1: hsl(37, 97%, 70%);
   --instagram-2: hsl(329, 70%, 58%);
   --youTube: hsl(348, 97%, 39%);
-  --gray: #f0f3fa;
+  --gray: #f8f9f3;
   --grayDark: #5f616d;
+  --baseBackground: white;
+  --baseColor: #1d2029;
   --padding-lateral: 0 1.5em;
   --font-size: 46px;
   --font-color: hsl(0, 0%, 100%);
 }
 
 .header {
-  background: #f0f3fa;
+  background: var(--gray);
   padding-bottom: 100px;
   border-radius: 0 0 20px 20px;
 }
@@ -33,7 +37,7 @@ body {
 }
 
 .wrapper p {
-  border-bottom: 1px solid var(--gray);
+  /* border-bottom: 1px solid var(--gray); */
   margin: 0;
   padding-bottom: 30px;
   font-weight: bold;
@@ -78,7 +82,7 @@ body {
   text-align: center;
 }
 .card-social-media {
-  color: var(--font-color);
+  color: var(--baseColor);
   display: flex;
   font-weight: bold;
   font-size: 12px;
@@ -104,7 +108,7 @@ body {
 
 .card-followers-title {
   /* border: 1px solid green; */
-  color: var(--font-color);
+  color: var(--baseColor);
   font-weight: 400;
   font-size: 0.9em;
   text-transform: uppercase;
@@ -169,7 +173,7 @@ body {
 }
 
 .dark-mode {
-  border-top: 2px solid bisque;
+  /* border-top: 2px solid bisque; */
   display: grid;
   justify-content: center;
   align-items: center;
@@ -202,7 +206,7 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: var(--gray);
   border-radius: 50px;
   transform: translateX(40px);
   transition: 0.3s;
@@ -272,12 +276,29 @@ body {
   }
 }
 
+.is-dark-mode {
+  /* Dark theme mode */
+  /* --Very-Dark-Blue(BG): hsl(230, 17%, 14%);
+    --Very-Dark-Blue(Top BG Pattern): hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue(Card BG): hsl(228, 28%, 20%);
+    --Desaturated-Blue(Text): hsl(228, 34%, 66%);
+    --White(Text): hsl(0, 0%, 100%); */
+  --gray: hsl(232, 19%, 15%);
+  --baseBackground: hsl(230, 17%, 14%);
+  --baseColor: white;
+  --grayNew: hsl(228, 34%, 66%);
+}
+.is-light-mode {
+  --gray: #f8f9f3;
+  --grayDark: #5f616d;
+  --baseBackground: white;
+  --baseColor: #1d2029;
+  --padding-lateral: 0 1.5em;
+  --font-size: 46px;
+  --font-color: hsl(0, 0%, 100%);
+}
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  body {
-    background: hsl(230, 17%, 14%);
-    color: var(--font-color);
-  }
   :root {
     /* Dark theme mode */
     /* --Very-Dark-Blue(BG): hsl(230, 17%, 14%);
@@ -285,21 +306,21 @@ body {
     --Dark-Desaturated-Blue(Card BG): hsl(228, 28%, 20%);
     --Desaturated-Blue(Text): hsl(228, 34%, 66%);
     --White(Text): hsl(0, 0%, 100%); */
-    --gray: hsl(228, 28%, 20%);
+    --gray: hsl(232, 19%, 15%);
+    --baseBackground: hsl(230, 17%, 14%);
+    --baseColor: white;
+    --grayNew: hsl(228, 34%, 66%);
   }
   .top-cards {
-    color: var(--font-color);
+    color: var(--baseColor);
     margin-bottom: 30px;
   }
   .card-small-views {
-    color: hsl(228, 34%, 66%);
+    color: var(--grayNew);
   }
 
   .wrapper p {
-    color: hsl(228, 34%, 66%);
-  }
-  .header {
-    background: hsl(232, 19%, 15%);
+    color: var(--grayNew);
   }
 
   .switch {
