@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  /* border: 1px solid red; */
+  font-family: 'Inter', sans-serif;
+  background: var(--baseBackground);
+  color: var(--baseColor);
+}
+
+:root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: #168ef4;
+  --twitter: hsl(203, 89%, 53%);
+  --instagram-1: hsl(37, 97%, 70%);
+  --instagram-2: hsl(329, 70%, 58%);
+  --youTube: hsl(348, 97%, 39%);
+  --gray: #f8f9f3;
+  --grayDark: #5f616d;
+  --baseBackground: white;
+  --baseColor: #1d2029;
+  --padding-lateral: 0 1.5em;
+  --font-size: 46px;
+  --font-color: hsl(0, 0%, 100%);
+}
+
+.wrapper {
+  display: grid;
+  padding: var(--padding-lateral);
+  color: var(--grayDark);
+}
+
+.wrapper p {
+  /* border-bottom: 1px solid var(--gray); */
+  margin: 0;
+  padding-bottom: 30px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-row-gap: 30px;
+  padding: var(--padding-lateral);
+}
