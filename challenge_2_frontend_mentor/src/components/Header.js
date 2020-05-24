@@ -1,7 +1,8 @@
 import React from 'react';
-// import '../public/css/styles.css';
+import Switch from '../components/Switch';
 
-export default function Header() {
+import '../components/switch.css';
+export default function Header({ className }) {
   return (
     <div>
       <header className='header'>
@@ -9,11 +10,7 @@ export default function Header() {
           <h1>Social Media Dashboard</h1>
           <p>Total Followards: 23,004</p>
         </div>
-        <nav className='dark-mode'>
-          <p className='dark-mode--title'>Dark Mode</p>
-          <input className='checkbox' type='checkbox' name='' id='checkbox' />
-          <label className='switch' htmlFor='checkbox'></label>
-        </nav>
+        <Switch className={className}></Switch>
       </header>
     </div>
   );
