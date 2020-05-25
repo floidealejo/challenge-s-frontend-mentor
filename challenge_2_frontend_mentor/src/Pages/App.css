@@ -83,46 +83,6 @@
   padding-right: 5px;
 }
 
-.overview {
-  display: grid;
-}
-.card-small {
-  display: grid;
-  background: var(--gray);
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  padding: var(--padding-lateral);
-}
-.card-small-number {
-  font-size: 23px;
-  font-weight: 700;
-  padding: 0 0em 0.5em 0.7em;
-  justify-self: self-start;
-  align-self: self-end;
-  margin: 0;
-}
-
-.card-small-views {
-  padding: 0 0.7em;
-  justify-self: self-start;
-  align-self: center;
-}
-
-.card-small-porcentage {
-  font-weight: 700;
-  padding: 0 0.7em 0.5em 0em;
-  justify-self: self-end;
-  align-self: self-end;
-  margin: 0;
-}
-
-.card-small-image {
-  padding: 0 0.7em 0.5em 0em;
-  justify-self: self-end;
-  align-self: self-end;
-  margin: 0;
-}
-
 @media screen and (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
