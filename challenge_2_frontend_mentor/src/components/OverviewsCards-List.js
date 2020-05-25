@@ -5,28 +5,28 @@ import '../Pages/globals.css';
 export default function OverviewsCardsList(props) {
   const overviewList = [
     {
+      id: 1,
       icon: '../images/icon-facebook.svg',
       pageViews: '97',
       growth: 4,
-      key: 1,
     },
     {
+      id: 2,
       icon: '../images/icon-instagram.svg',
       pageViews: '1827',
       growth: -54,
-      key: 2,
     },
     {
+      id: 3,
       icon: '../images/icon-twitter.svg',
       pageViews: '6487',
       growth: -32,
-      key: 3,
     },
     {
+      id: 4,
       icon: '../images/icon-youtube.svg',
       pageViews: '1287',
       growth: 8,
-      key: 4,
     },
   ];
   return (
@@ -35,7 +35,7 @@ export default function OverviewsCardsList(props) {
         {overviewList.map((overviewList) => (
           <OverviewCard
             className={props.className}
-            key={overviewList.key}
+            key={overviewList.id}
             {...overviewList}
           ></OverviewCard>
         ))}

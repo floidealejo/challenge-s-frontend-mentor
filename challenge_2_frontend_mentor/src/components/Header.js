@@ -1,8 +1,6 @@
 import React from 'react';
-import Switch from '../components/Switch';
 
-import '../components/switch.css';
-export default function Header({ className }) {
+export default function Header({ children }) {
   return (
     <div>
       <header className='header'>
@@ -10,7 +8,7 @@ export default function Header({ className }) {
           <h1>Social Media Dashboard</h1>
           <p>Total Followards: 23,004</p>
         </div>
-        <Switch className={className}></Switch>
+        {children}
       </header>
     </div>
   );

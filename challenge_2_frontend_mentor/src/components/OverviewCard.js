@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function OverviewCard({ icon, pageViews, growth, key }) {
+export default function OverViewCard({ icon, pageViews, growth }) {
   return (
     <>
-      <artcle className='card-small'>
+      <article className='card-small'>
         <p className='card-small-views'>Pages Views</p>
         <img className='card-small-image' src={icon} alt='' />
         <p className='card-small-number'>{pageViews}</p>
@@ -11,7 +11,7 @@ export default function OverviewCard({ icon, pageViews, growth, key }) {
           <img src='./images/icon-up.svg' alt='' />
           {growth}%
         </p>
-      </artcle>
+      </article>
     </>
   );
 }

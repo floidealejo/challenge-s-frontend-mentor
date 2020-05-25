@@ -72,6 +72,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media screen and (min-width: 620px) {
   .grid {
     /* border: 1px solid purple; */
@@ -97,5 +103,44 @@ body {
     display: grid;
     text-align: center;
     max-width: 1220px;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme mode */
+    /* --Very-Dark-Blue(BG): hsl(230, 17%, 14%);
+    --Very-Dark-Blue(Top BG Pattern): hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue(Card BG): hsl(228, 28%, 20%);
+    --Desaturated-Blue(Text): hsl(228, 34%, 66%);
+    --White(Text): hsl(0, 0%, 100%); */
+    --gray: hsl(232, 19%, 15%);
+    --baseBackground: hsl(230, 17%, 14%);
+    --baseColor: white;
+    --grayNew: hsl(228, 34%, 66%);
+  }
+  .top-cards {
+    color: var(--baseColor);
+    margin-bottom: 30px;
+  }
+  .card-small-views {
+    color: var(--grayNew);
+  }
+
+  .wrapper p {
+    color: var(--grayNew);
+  }
+
+  .switch {
+    background-image: linear-gradient(
+      to right,
+      var(--twitter) 0%,
+      var(--lime-green) 100%
+    );
+  }
+
+  .switch::before {
+    background: #282943;
   }
 }
