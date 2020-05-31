@@ -11,7 +11,7 @@
   display: none;
 }
 .checkbox:checked ~ .switch::before {
-  transform: translateX(0);
+  transform: translateX(40px);
 }
 
 .switch {
@@ -34,7 +34,7 @@
   height: 20px;
   background-color: var(--gray);
   border-radius: 50px;
-  transform: translateX(40px);
+  transform: translateX(0px);
   transition: 0.3s;
   will-change: transform;
 }

@@ -1,5 +1,8 @@
 const checkbox = document.querySelector('#checkbox');
-// console.log(window.matchMedia('(prefers-color-scheme: dark)').media);
+// console.log();
+if (window.matchMedia('(prefers-color-scheme: dark)').media) {
+  checkbox.setAttribute('checked', true);
+}
 
 // document.body.style.setProperty('--gray', 'blue');
 checkbox.addEventListener('change', function (e) {
