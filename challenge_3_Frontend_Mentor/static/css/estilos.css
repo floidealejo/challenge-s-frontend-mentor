@@ -1,5 +1,16 @@
 body {
-  border: 2px solid blue;
+  font-family: "Public Sans", sans-serif;
+}
+
+.header {
+  border: 1px solid peru;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 10px;
+}
+
+.header__menu {
+  justify-self: end;
 }
 
 /*# sourceMappingURL=estilos.css.map */
