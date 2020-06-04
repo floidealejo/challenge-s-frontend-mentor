@@ -8,6 +8,7 @@
   --White: hsl(0, 0%, 100%);
   font-size: 16px;
   color: var(--Grayish-Blue);
+  --wrapperSpace: 1.5em;
 }
 
 body {
@@ -32,18 +33,16 @@ body {
 }
 
 .hero {
-  display: grid;
-  border: 1px solid red;
-  background-size: cover;
-  background-repeat: no-repeat;
   text-align: center;
 }
 .hero .copy {
   margin-bottom: 2em;
 }
 .hero__image {
-  border: 1px solid green;
+  margin: 0 calc(-1 * var(--wrapperSpace));
   height: 300px;
+  background: url("../../challenge-assets/images/image-mockups.png") center bottom no-repeat, url("../../challenge-assets/images/bg-intro-mobile.svg");
+  background-size: 346px, cover;
 }
 
 .title--h1 {
@@ -70,7 +69,7 @@ body {
 }
 
 .wrapper {
-  padding: 0 1.5em;
+  padding: 0 var(--wrapperSpace);
 }
 
 /*# sourceMappingURL=estilos.css.map */
