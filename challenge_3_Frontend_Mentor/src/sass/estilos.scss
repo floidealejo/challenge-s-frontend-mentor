@@ -1,3 +1,5 @@
+@import './header.scss';
+@import './hero.scss';
 :root {
   // ### Primary
   --Dark-Blue: hsl(233, 26%, 24%);
@@ -23,33 +25,6 @@ body {
   line-height: 1.7;
   font-size: 0.9em;
   // border: 1px solid peru;
-}
-
-.header {
-  border: 1px solid peru;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 0 10px;
-}
-.header__menu {
-  justify-self: end;
-}
-
-.hero {
-  // border: 1px solid red;
-  text-align: center;
-  .copy {
-    margin-bottom: 2em;
-  }
-  &__image {
-    margin: 0 calc(-1 * var(--wrapperSpace));
-    // border: 1px solid green;
-    height: 300px;
-    background: url('../../challenge-assets/images/image-mockups.png') center
-        bottom no-repeat,
-      url('../../challenge-assets/images/bg-intro-mobile.svg');
-    background-size: 346px, cover;
-  }
 }
 
 .title {

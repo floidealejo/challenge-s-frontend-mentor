@@ -1,0 +1,9 @@
+.header {
+  border: 10px solid peru;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 10px;
+}
+.header__menu {
+  justify-self: end;
+}
